@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Animal Photos</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #333;
+      color: white;
+    }
+    #photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    #photos img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div id="photos">
+    <h1>ANIMAL PHOTOS</h1>
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/camel.jpg" alt="camel">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/cheetah.jpg" alt="cheetah">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/elephant.jpg" alt="elephant">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/gorilla.jpg" alt="gorilla">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/hyena.jpg" alt="hyena">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/lion.jpg" alt="lion">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/polar_bear.jpg" alt="polar bear">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/tiger.jpg" alt="tiger">
+    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/wolf.jpg" alt="wolf">
+  </div>
 </body>
-
 </html>
