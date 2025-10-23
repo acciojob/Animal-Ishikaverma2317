@@ -1,48 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animal Photos</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #2a2a2a 0,
+        #2a2a2a 10px,
+        #333 10px,
+        #333 20px
+      );
+      font-family: 'Georgia', serif;
       color: white;
+      text-align: center;
     }
-    #photos {
+
+    #animal-photos {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #3c3c3c;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #photo-heading {
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #999;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      max-width: 800px;
-      margin: 20px auto;
+      gap: 15px;
+      justify-items: center;
     }
-    #photos img {
+
+    .photo-grid img {
       width: 100%;
-      height: 200px;
+      height: 230px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
+      transition: transform 0.3s;
     }
-    h1 {
-      margin: 20px 0;
-      font-size: 2rem;
-      letter-spacing: 2px;
+
+    .photo-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="photos">
-    <h1>ANIMAL PHOTOS</h1>
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/camel.jpg" alt="camel">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/cheetah.jpg" alt="cheetah">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/elephant.jpg" alt="elephant">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/gorilla.jpg" alt="gorilla">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/hyena.jpg" alt="hyena">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/lion.jpg" alt="lion">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/polar_bear.jpg" alt="polar bear">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/tiger.jpg" alt="tiger">
-    <img src="http://www.zsl.org/applied_art/edtech/courses/WEB/portfolio/2014_Rami_Portfolio_Period4/unit4/cs/project1/wolf.jpg" alt="wolf">
+
+  <div id="animal-photos">
+    <h1 id="photo-heading">Animal Photos</h1>
+    <div class="photo-grid">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/camel.jpg" alt="camel">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/cheetah.jpg" alt="cheetah">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/elephant.jpg" alt="elephant">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/gorilla.jpg" alt="gorilla">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/koala.jpg" alt="koala">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/lion.jpg" alt="lion">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/polar_bear.jpg" alt="polar bear">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/tiger.jpg" alt="tiger">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/wolf.jpg" alt="wolf">
+    </div>
   </div>
+
 </body>
 </html>
